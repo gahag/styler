@@ -20,6 +20,10 @@ pub async fn handle(
 	sources: &Sources,
 	query: InlineQuery
 ) -> Result<(), Error> {
+	if query.query.trim().is_empty() {
+		return Ok(())
+	}
+
 	let items: FuturesUnordered<_> = sources
 		.iter()
 		.map(
