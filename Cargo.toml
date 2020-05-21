@@ -5,15 +5,15 @@ authors = ["gahag <gabriel.s.b@live.com>"]
 edition = "2018"
 
 [dependencies]
-telegram-bot = { version = "0.7", default-features = false, features = ["rustls"] }
 tokio = { version = "0.2", features = ["rt-core", "macros"] }
-reqwest = { version = "0.10", default-features = false, features = ["rustls-tls"] }
-scraper = { version = "0.11", default-features = false }
 futures = "0.3"
 async-trait = "0.1"
 serde = "1.0"
 simple_logger = "1.6"
 log = "0.4"
+reqwest = "0.10"
+scraper = { version = "0.11", default-features = false }
+telegram-bot = "0.7"
 
 [profile.release]
 lto = true
